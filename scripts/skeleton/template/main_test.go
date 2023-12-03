@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-var example1 = `0`
+var example = `0`
 
 func Test_part1(t *testing.T) {
 	tests := []struct {
@@ -15,7 +15,7 @@ func Test_part1(t *testing.T) {
 	}{
 		{
 			name:  "example",
-			input: example1,
+			input: example,
 			want:  0,
 		},
 		// {
@@ -33,8 +33,6 @@ func Test_part1(t *testing.T) {
 	}
 }
 
-var example2 = `0`
-
 func Test_part2(t *testing.T) {
 	tests := []struct {
 		name  string
@@ -43,7 +41,7 @@ func Test_part2(t *testing.T) {
 	}{
 		{
 			name:  "example",
-			input: example2,
+			input: example,
 			want:  0,
 		},
 		// {
