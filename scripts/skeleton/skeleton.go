@@ -50,13 +50,14 @@ func Run(day, year int) {
 	if err != nil {
 		log.Fatalf("creating main_test.go file: %v", err)
 	}
-	_, err = os.Create(inputFilename)
+	inputFile, err := os.Create(inputFilename)
 	if err != nil {
 		log.Fatalf("creating input.txt file: %v", err)
 	}
 
 	ts.ExecuteTemplate(mainFile, "main.go", nil)
 	ts.ExecuteTemplate(testFile, "main_test.go", nil)
+	inputFile.Write([]byte("0"))
 	fmt.Printf("templates made for %d-day%d\n", year, day)
 }
 
